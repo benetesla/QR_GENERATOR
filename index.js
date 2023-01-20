@@ -7,9 +7,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 //templates  
-app.set("view engine", "ejs");
+app.set("view engine", 'ejs');
 //routes
 app.set("views", path.join(__dirname, "view"));
+//static files render
 app.get('/', (req, res) => {
    res.render('index');
 });
